@@ -178,18 +178,3 @@ united_kingdom = [
 # name.each { |name| puts name }
 
 # 4. Use a loop to find the total population of the UK.
-
-
-puts ":5295000 "
-first = gets.to_i
-puts ":3063000 "
-second = gets.to_i
-puts ":53010000 "
-third = gets.to_i
-
-total = 0
-for i in (first..third) do
-  total += i
-end
-
-puts total
