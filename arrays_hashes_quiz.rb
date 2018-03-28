@@ -106,7 +106,7 @@ users = {
 
 ### Complete these tasks:
 
-# 1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
+1. Get Jonathan's Twitter handle (i.e. the string `"jonnyt"`)
 p users["Jonathan"][:twitter]
 # 2. Get Erik's hometown
 p users["Erik"][:home_town]
@@ -119,12 +119,29 @@ sorted_numbers= users["Erik"][:lottery_numbers].sort!
 p "The lowest number in Erik's lottery numbers was: #{sorted_numbers[0]}"
 
 # 6. Return an array of Avril's lottery numbers that are even
+avrils_lottery_number = users["Avril"][:lottery_numbers]
+even_number = []
+for num in avrils_lottery_number
+  if num %2 == 0
+    even_number << num
+  end
+end
+p even_number
 
+7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
+p users["Erik"][:lottery_numbers] << 7
 
-# 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
 # 8. Change Erik's hometown to Edinburgh
+p users['Erik'][:home_town] = "Edinburgh"
+
+
 # 9. Add a pet dog to Erik called "Fluffy"
-# 10. Add another person to the users hash
+
+p users['Erik'][:pets] = "Fluffy"
+10. Add another person to the users hash
+
+user = { }
+p user[:name] = 'Mona'
 
 
 ## Exercise C
@@ -149,11 +166,13 @@ united_kingdom = [
   }
 ]
 
-### Complete these tasks:
+## Complete these tasks:
 
-# 1. Change the capital of Wales from `"Swansea"` to `"Cardiff"`.
+1. Change the capital of Wales from `"Swansea"` to `"Cardiff"`.
  p united_kingdom[1][capital] = "Cardiff"
 # 2. Create a Hash for Northern Ireland and add it to the `united_kingdom` array (The capital is Belfast, and the population is 1,811,000).
 p united_kingdom.push ({ name:"Northern Ireland " , population:"1,811,000", capital: "Belfast" })
-# 3. Use a loop to print the names of all the countries in the UK.
-# 4. Use a loop to find the total population of the UK.
+3. Use a loop to print the names of all the countries in the UK.
+
+
+4. Use a loop to find the total population of the UK.
